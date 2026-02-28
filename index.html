@@ -48,6 +48,7 @@ nav a{
 text-decoration:none;
 color:white;
 opacity:0.8;
+transition:0.3s;
 }
 
 nav a:hover{color:#a855f7}
@@ -58,37 +59,48 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:80px 8%;
-gap:40px;
+gap:60px;
+flex-wrap:wrap;
 }
 
-.hero h2{
+.hero-left{
+max-width:600px;
+}
+
+.intro-text{
+color:#ec4899;
+font-weight:600;
+letter-spacing:2px;
+}
+
+.hero-name{
 font-size:60px;
 font-weight:800;
 background:linear-gradient(to right,#8b5cf6,#ec4899);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+margin-top:10px;
 }
 
-.hero p{
+.hero-role{
+margin-top:10px;
+font-weight:500;
+color:#c084fc;
+}
+
+.hero-desc{
 margin-top:20px;
-max-width:500px;
 opacity:0.8;
 }
 
-.btn{
-margin-top:30px;
-display:inline-block;
-padding:12px 28px;
-border-radius:10px;
-background:linear-gradient(to right,#8b5cf6,#ec4899);
-color:white;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
+.hero-right img{
+width:320px;
+border-radius:20px;
+border:2px solid #a855f7;
+box-shadow:0 0 40px rgba(168,85,247,0.6);
 }
 
-.btn:hover{transform:scale(1.05)}
-
+/* SOCIAL */
 .social{
 margin-top:25px;
 display:flex;
@@ -101,13 +113,44 @@ color:#a855f7;
 transition:0.3s;
 }
 
-.social a:hover{transform:scale(1.2)}
+.social a:hover{
+transform:scale(1.2);
+}
 
-.hero img{
-width:320px;
-border-radius:20px;
-border:2px solid #a855f7;
-box-shadow:0 0 40px rgba(168,85,247,0.6);
+/* BUTTONS */
+.button-group{
+margin-top:30px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:12px 28px;
+border-radius:10px;
+background:linear-gradient(to right,#8b5cf6,#ec4899);
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{transform:scale(1.05)}
+
+.hire-btn{
+padding:12px 28px;
+border-radius:10px;
+background:linear-gradient(to right,#ec4899,#8b5cf6);
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+box-shadow:0 0 20px rgba(236,72,153,0.5);
+}
+
+.hire-btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 35px rgba(236,72,153,0.8);
 }
 
 /* SECTION */
@@ -118,7 +161,7 @@ margin-bottom:40px;
 color:#a855f7;
 }
 
-/* GLASS CARD */
+/* CARD */
 .card{
 background:rgba(255,255,255,0.05);
 backdrop-filter:blur(15px);
@@ -134,21 +177,18 @@ transform:translateY(-8px);
 box-shadow:0 0 35px rgba(168,85,247,0.5);
 }
 
-/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
-/* PROJECT IMAGE */
 .project-img{
 width:100%;
 border-radius:15px;
 margin-bottom:15px;
 }
 
-/* SKILLS */
 .skill{
 display:flex;
 align-items:center;
@@ -171,7 +211,7 @@ opacity:0.6;
 <body>
 
 <nav>
-<h1>MY PORTFOLIO</h1>
+<h1>TBGS</h1>
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#education">Education</a></li>
@@ -180,26 +220,58 @@ opacity:0.6;
 <li><a href="#project">Project</a></li>
 </ul>
 </nav>
-
 <!-- HERO -->
 <div class="hero">
-<div>
-<h2>Tubagus Muhamad Alpin</h2>
-<p>Mahasiswa Teknik Elektro dengan ketertarikan pada sistem tenaga listrik, analisis teknis dan teknologi digital.</p>
 
-<div class="social">
-<a href="https://instagram.com/tbgs.alpiin" target="_blank"><i class="fab fa-instagram"></i></a>
-<a href="https://linkedin.com/in/tubagusmuhamadalpin" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <div class="hero-left">
+
+        <span class="intro-text">HI, I'M</span>
+
+        <h2 class="hero-name">Tubagus Muhamad Alpin</h2>
+
+        <h3 class="hero-role">
+            Student Electrical Engineering – Technician Building & MEP
+        </h3>
+
+        <p class="hero-desc">
+            Mahasiswa Teknik Elektro dengan ketertarikan pada sistem tenaga listrik, 
+            analisis teknis dan teknologi digital.
+        </p>
+
+        <!-- SOCIAL ICON -->
+        <div class="social">
+            <a href="https://instagram.com/tbgs.alpiin" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://linkedin.com/in/tubagusmuhamadalpin" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="mailto:tubagusalpin8@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <!-- BUTTON GROUP -->
+        <div class="button-group">
+            <a href="cv.pdf" download class="btn">
+                <i class="fas fa-download"></i> Download CV
+            </a>
+
+            <a href="mailto:tubagusalpin8@gmail.com?subject=Job%20Opportunity%20for%20Tubagus%20Alpin" class="hire-btn">
+                <i class="fas fa-paper-plane"></i> Hire Me
+            </a>
+        </div>
+
+    </div>
+
+    <!-- PROFILE IMAGE -->
+    <div class="hero-right">
+        <img src="fotoprofil.png" alt="Profile">
+    </div>
+
 </div>
-
-<a href="cv.pdf" download class="btn">
-<i class="fas fa-download"></i> Download CV
-</a>
-</div>
-
-<img src="fotoprofil.png" alt="profile">
-</div>
-
 <!-- ABOUT -->
 <section id="about">
 <h3 class="section-title"><i class="fas fa-user"></i> About Me</h3>
