@@ -63,21 +63,19 @@ gap:60px;
 flex-wrap:wrap;
 }
 
-.hero-left{
-max-width:600px;
-}
+.hero-left{max-width:600px;}
 
 .intro-text{
 color:#ec4899;
 font-weight:800;
 letter-spacing:4px;
-font-size:90px;   
+font-size:70px;
 line-height:1;
 display:block;
 }
 
 .hero-name{
-font-size:50px;
+font-size:60px;
 font-weight:800;
 background:linear-gradient(to right,#8b5cf6,#ec4899);
 -webkit-background-clip:text;
@@ -116,9 +114,7 @@ color:#a855f7;
 transition:0.3s;
 }
 
-.social a:hover{
-transform:scale(1.2);
-}
+.social a:hover{transform:scale(1.2);}
 
 /* BUTTONS */
 .button-group{
@@ -180,27 +176,145 @@ transform:translateY(-8px);
 box-shadow:0 0 35px rgba(168,85,247,0.5);
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+/* ===== ABOUT ===== */
+.about-container{
+display:flex;
+gap:50px;
+align-items:center;
+flex-wrap:wrap;
 }
 
-.project-img{
-width:100%;
+.about-text{
+flex:2;
+line-height:1.8;
+}
+
+.about-visual{
+flex:1;
+display:flex;
+flex-direction:column;
+gap:25px;
+align-items:center;
+}
+
+.icon-box{
+width:90px;
+height:90px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:20px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(168,85,247,0.3);
+font-size:35px;
+color:#a855f7;
+box-shadow:0 0 25px rgba(168,85,247,0.3);
+animation:float 4s ease-in-out infinite;
+}
+
+/* ===== EDUCATION ===== */
+.education-container{
+display:flex;
+gap:50px;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.education-text{flex:2;}
+
+.education-text h4{
+font-size:22px;
+color:#ec4899;
+margin-bottom:10px;
+}
+
+.edu-detail{
+opacity:0.8;
+margin-bottom:20px;
+}
+
+.edu-item{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:12px;
+opacity:0.9;
+}
+
+.edu-item i{color:#a855f7;}
+
+.education-visual img{
+width:280px;
+border-radius:20px;
+border:2px solid #a855f7;
+box-shadow:0 0 35px rgba(168,85,247,0.6);
+}
+
+/* ===== EXPERIENCE ===== */
+.experience-container{
+display:flex;
+flex-direction:column;
+gap:40px;
+}
+
+.experience-card{
+display:flex;
+gap:30px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(168,85,247,0.3);
+border-radius:20px;
+padding:25px;
+transition:0.3s;
+flex-wrap:wrap;
+}
+
+.experience-card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 35px rgba(168,85,247,0.5);
+}
+
+.exp-image img{
+width:250px;
 border-radius:15px;
+border:2px solid #a855f7;
+box-shadow:0 0 25px rgba(168,85,247,0.6);
+}
+
+.exp-content{flex:1;}
+
+.exp-content h4{
+color:#ec4899;
+margin-bottom:5px;
+}
+
+.exp-role{
+opacity:0.7;
 margin-bottom:15px;
 }
 
-.skill{
+.exp-content ul{
+padding-left:18px;
 display:flex;
-align-items:center;
-gap:15px;
+flex-direction:column;
+gap:8px;
+opacity:0.9;
 }
 
-.skill i{
-font-size:22px;
-color:#ec4899;
+/* ANIMATION */
+@keyframes float{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-10px);}
+100%{transform:translateY(0px);}
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.about-container,
+.education-container,
+.experience-card{
+flex-direction:column;
+}
 }
 
 footer{
@@ -214,7 +328,7 @@ opacity:0.6;
 <body>
 
 <nav>
-<h1>tbgsalpin</h1>
+<h1>tbgs</h1>
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#education">Education</a></li>
@@ -228,7 +342,7 @@ opacity:0.6;
 
     <div class="hero-left">
 
-        <span class="intro-text">HELLO, I'AM</span>
+        <span class="intro-text">HI, I'AM</span>
 
         <h2 class="hero-name">Tubagus Muhamad Alpin</h2>
 
@@ -278,49 +392,137 @@ opacity:0.6;
 <!-- ABOUT -->
 <section id="about">
 <h3 class="section-title"><i class="fas fa-user"></i> About Me</h3>
-<div class="card">
-Saya merupakan Mahasiswa Aktif Semester 6 Program Studi Teknik Elektro di Universitas Mercu Buana dengan fokus pada sistem tenaga listrik dan instalasi kelistrikan. 
-Selama masa perkuliahan, saya mempelajari berbagai aspek teknis seperti analisis rangkaian listrik, instalasi tenaga listrik, serta pemrograman dasar yang mendukung pengembangan solusi berbasis teknologi.
 
-Selain latar belakang akademik, saya juga memiliki pengalaman profesional sebagai Operator Facility di PT Honda Prospect Motor dan saat ini sebagai Teknisi Building & MEP di LRT Jabodebek. 
-Dalam peran tersebut, saya terbiasa melakukan monitoring, preventive maintenance, troubleshooting gangguan kelistrikan, serta bekerja sesuai standar operasional dan keselamatan kerja. 
-Kombinasi antara pendidikan dan pengalaman lapangan membentuk saya menjadi individu yang sistematis, adaptif, dan berorientasi pada solusi.
+<div class="about-container">
+
+    <!-- TEXT SIDE -->
+    <div class="card about-text">
+        <p>
+        Saya merupakan Mahasiswa Aktif Semester 6 Program Studi Teknik Elektro di Universitas Mercu Buana 
+        dengan fokus pada sistem tenaga listrik dan instalasi kelistrikan. 
+        Selama masa perkuliahan, saya mempelajari analisis rangkaian listrik, sistem distribusi tenaga, 
+        serta dasar pemrograman yang mendukung pengembangan solusi berbasis teknologi.
+        </p>
+
+        <p style="margin-top:20px;">
+        Selain latar belakang akademik, saya memiliki pengalaman profesional sebagai 
+        <strong>Operator Facility</strong> di PT Honda Prospect Motor dan saat ini 
+        sebagai <strong>Teknisi Building & MEP</strong> di LRT Jabodebek. 
+        Saya terbiasa melakukan monitoring sistem, preventive maintenance, troubleshooting gangguan, 
+        serta bekerja sesuai standar operasional dan keselamatan kerja. 
+        Pengalaman tersebut membentuk saya menjadi pribadi yang sistematis, adaptif, dan berorientasi pada solusi.
+        </p>
+    </div>
+
+    <!-- ICON SIDE -->
+    <div class="about-visual">
+        <div class="icon-box">
+            <i class="fas fa-bolt"></i>
+        </div>
+        <div class="icon-box">
+            <i class="fas fa-building"></i>
+        </div>
+        <div class="icon-box">
+            <i class="fas fa-cogs"></i>
+        </div>
+    </div>
+
 </div>
 </section>
 
 <!-- EDUCATION -->
 <section id="education">
 <h3 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h3>
-<div class="card">
-Universitas Mercu Buana | Teknik Elektro | IPK 3.37 | 2023 - Sekarang
-Pemrograman dasar
-Sistem tenaga listrik
-Sistem penerangan listrik
+
+<div class="education-container">
+
+    <!-- TEXT SIDE -->
+    <div class="card education-text">
+        <h4>Universitas Mercu Buana</h4>
+        <p class="edu-detail">
+            Program Studi Teknik Elektro | IPK 3.37 <br>
+            2023 - Sekarang
+        </p>
+
+        <div class="edu-list">
+            <div class="edu-item">
+                <i class="fas fa-code"></i>
+                <span>Pemrograman Dasar</span>
+            </div>
+
+            <div class="edu-item">
+                <i class="fas fa-bolt"></i>
+                <span>Sistem Tenaga Listrik</span>
+            </div>
+
+            <div class="edu-item">
+                <i class="fas fa-lightbulb"></i>
+                <span>Sistem Penerangan Listrik</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE SIDE -->
+    <div class="education-visual">
+        <!-- GANTI nama file kalau mau pakai foto sendiri -->
+        <img src="umb.jpg" alt="Campus">
+    </div>
+
 </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
 <h3 class="section-title"><i class="fas fa-briefcase"></i> Experience</h3>
-<div class="grid">
-<div class="card">
-PT Honda Prospect Motor <br> Operator Facility | 2022 - 2024
-Mengoperasikan serta memantau pada mesin genset 600 kva dan 2000 kva 
-Mengoperasikan serta memantau pada mesin compressor 37 kw  
-Mengoperasikan serta memantau pada mesin pompa banjir 
-Menangani perbaikan atau penggantian sesuai permintaan dari tiap departemen terkait dengan 
-kerusakan atau improvement 
-Melakukan inspeksi rutin dan mengidentifikasi potensi masalah untuk memastikan operasi 
-fasilitas berfungsi sesuai standar agar efisien dan aman 
-Menyusun laporan harian mengenai aktivitas kegiatan pemeliharaan dan perbaikan
-</div>
-<div class="card">
-LRT Jabodebek <br> Teknisi Building & ME | 2024 - Sekarang
-Melakukan pengecekan rutin terhadap kondisi bangunan, fasilitas bangunan, baik mekanikal –elektrikal & plumbing
-Melakukan pengecekan, observasi, dan perbaikan minor pada gangguan atau kerusakan
-Membantu analisa perencanaan perbaikan pada bangunan berdasarkan hasil observasi di lapangan
-Melakukan perawatan terhadap fasilitas bangunan
-</div>
+
+<div class="experience-container">
+
+    <!-- HONDA -->
+    <div class="experience-card">
+        <div class="exp-image">
+            <img src="honda.jpg" alt="Honda">
+        </div>
+
+        <div class="exp-content">
+            <h4>
+                <i class="fas fa-industry"></i> 
+                PT Honda Prospect Motor
+            </h4>
+            <p class="exp-role">Operator Facility | 2022 - 2024</p>
+
+            <ul>
+                <li>Mengoperasikan dan memantau mesin genset 600 KVA & 2000 KVA</li>
+                <li>Mengoperasikan compressor 37 kW dan pompa banjir</li>
+                <li>Menangani perbaikan dan improvement fasilitas</li>
+                <li>Melakukan inspeksi rutin untuk memastikan efisiensi & keamanan</li>
+                <li>Menyusun laporan harian pemeliharaan dan perbaikan</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- LRT -->
+    <div class="experience-card">
+        <div class="exp-image">
+            <img src="lrt.jpg" alt="LRT">
+        </div>
+
+        <div class="exp-content">
+            <h4>
+                <i class="fas fa-train"></i> 
+                LRT Jabodebek
+            </h4>
+            <p class="exp-role">Teknisi Building & MEP | 2024 - Sekarang</p>
+
+            <ul>
+                <li>Pengecekan rutin fasilitas mekanikal, elektrikal & plumbing</li>
+                <li>Observasi dan perbaikan minor gangguan bangunan</li>
+                <li>Membantu analisa perencanaan perbaikan berdasarkan observasi</li>
+                <li>Melakukan perawatan fasilitas untuk menjaga keandalan sistem</li>
+            </ul>
+        </div>
+    </div>
+
 </div>
 </section>
 
