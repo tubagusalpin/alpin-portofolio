@@ -31,11 +31,17 @@ display:flex;
 justify-content:space-between;
 padding:30px 8%;
 align-items:center;
+
+position:sticky;
+top:0;
+z-index:9999;
+background:#0b0f2c;
 }
 
 nav h1{
 color:#a855f7;
 font-weight:700;
+font-size:20px;
 }
 
 nav ul{
@@ -97,8 +103,6 @@ opacity:0.8;
 }
 
 .hero-animation{
-width:320px;
-height:320px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -107,6 +111,8 @@ border:2px solid #a855f7;
 box-shadow:0 0 40px rgba(168,85,247,0.6);
 position:relative;
 overflow:hidden;
+width:160px;
+height:160px;
 }
 
 .hero-animation img.hero-electric{
