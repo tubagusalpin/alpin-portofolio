@@ -9,153 +9,161 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-body{
-    background:#0b0f2c;
-    color:white;
-    overflow-x:hidden;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0b0f2c;color:white;overflow-x:hidden}
 
 /* GRID BACKGROUND */
 body::before{
-    content:"";
-    position:fixed;
-    width:100%;
-    height:100%;
-    background-image:
-    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size:40px 40px;
-    z-index:-1;
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+background-image:
+linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+background-size:40px 40px;
+z-index:-1;
 }
 
-/* NAVBAR */
+/* NAV */
 nav{
-    display:flex;
-    justify-content:space-between;
-    padding:30px 8%;
+display:flex;
+justify-content:space-between;
+padding:30px 8%;
+align-items:center;
 }
 
 nav h1{
-    font-size:20px;
-    color:#a855f7;
-    font-weight:700;
+color:#a855f7;
+font-weight:700;
 }
 
 nav ul{
-    display:flex;
-    gap:30px;
-    list-style:none;
+display:flex;
+gap:25px;
+list-style:none;
 }
 
 nav a{
-    text-decoration:none;
-    color:white;
-    opacity:0.8;
+text-decoration:none;
+color:white;
+opacity:0.8;
 }
 
-nav a:hover{
-    color:#a855f7;
-}
+nav a:hover{color:#a855f7}
 
 /* HERO */
 .hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:80px 8%;
-    gap:40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px 8%;
+gap:40px;
 }
 
 .hero h2{
-    font-size:60px;
-    font-weight:800;
-    background:linear-gradient(to right,#8b5cf6,#ec4899);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+font-size:60px;
+font-weight:800;
+background:linear-gradient(to right,#8b5cf6,#ec4899);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
 .hero p{
-    margin-top:20px;
-    max-width:500px;
-    opacity:0.8;
+margin-top:20px;
+max-width:500px;
+opacity:0.8;
 }
+
+.btn{
+margin-top:30px;
+display:inline-block;
+padding:12px 28px;
+border-radius:10px;
+background:linear-gradient(to right,#8b5cf6,#ec4899);
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{transform:scale(1.05)}
 
 .social{
-    margin-top:30px;
-    display:flex;
-    gap:20px;
+margin-top:25px;
+display:flex;
+gap:20px;
 }
 
-.social i{
-    font-size:22px;
-    color:#a855f7;
-    cursor:pointer;
-    transition:0.3s;
+.social a{
+font-size:22px;
+color:#a855f7;
+transition:0.3s;
 }
 
-.social i:hover{
-    transform:scale(1.2);
-}
+.social a:hover{transform:scale(1.2)}
 
-/* IMAGE */
 .hero img{
-    width:320px;
-    border-radius:20px;
-    border:2px solid #a855f7;
-    box-shadow:0 0 40px rgba(168,85,247,0.6);
-    animation:float 4s ease-in-out infinite;
-}
-
-@keyframes float{
-    0%,100%{transform:translateY(0)}
-    50%{transform:translateY(-20px)}
+width:320px;
+border-radius:20px;
+border:2px solid #a855f7;
+box-shadow:0 0 40px rgba(168,85,247,0.6);
 }
 
 /* SECTION */
-section{
-    padding:80px 8%;
-}
-
+section{padding:80px 8%}
 .section-title{
-    font-size:36px;
-    margin-bottom:40px;
-    color:#a855f7;
+font-size:36px;
+margin-bottom:40px;
+color:#a855f7;
 }
 
 /* GLASS CARD */
 .card{
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(168,85,247,0.3);
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 0 30px rgba(168,85,247,0.2);
-    margin-bottom:30px;
-    transition:0.3s;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(168,85,247,0.3);
+padding:25px;
+border-radius:20px;
+box-shadow:0 0 25px rgba(168,85,247,0.2);
+transition:0.3s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 40px rgba(168,85,247,0.5);
+transform:translateY(-8px);
+box-shadow:0 0 35px rgba(168,85,247,0.5);
 }
 
+/* GRID */
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* PROJECT IMAGE */
+.project-img{
+width:100%;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+/* SKILLS */
+.skill{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.skill i{
+font-size:22px;
+color:#ec4899;
 }
 
 footer{
-    text-align:center;
-    padding:40px;
-    opacity:0.6;
+text-align:center;
+padding:40px;
+opacity:0.6;
 }
 </style>
 </head>
@@ -163,73 +171,107 @@ footer{
 <body>
 
 <nav>
-    <h1>MY PORTFOLIO</h1>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#project">Project</a></li>
-    </ul>
+<h1>MY PORTFOLIO</h1>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#project">Project</a></li>
+</ul>
 </nav>
 
 <!-- HERO -->
 <div class="hero">
-    <div>
-        <h2>Tubagus Muhamad Alpin</h2>
-        <p>Mahasiswa Teknik Elektro dengan ketertarikan pada sistem tenaga listrik,
-        analisis teknis dan teknologi digital.</p>
+<div>
+<h2>Tubagus Muhamad Alpin</h2>
+<p>Mahasiswa Teknik Elektro dengan ketertarikan pada sistem tenaga listrik, analisis teknis dan teknologi digital.</p>
 
-        <div class="social">
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-github"></i>
-            <i class="fas fa-envelope"></i>
-        </div>
-    </div>
+<div class="social">
+<a href="https://instagram.com/tbgs.alpiin" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://linkedin.com/in/USERNAMEKAMU" target="_blank"><i class="fab fa-linkedin"></i></a>
+</div>
 
-    <img src="fotoprofil.png" alt="profile">
+<a href="TUBAGUS MUHAMAD ALPIN CV.pdf" download class="btn">
+<i class="fas fa-download"></i> Download CV
+</a>
+</div>
+
+<img src="fotoptofil.png" alt="profile">
 </div>
 
 <!-- ABOUT -->
 <section id="about">
-    <h3 class="section-title"><i class="fas fa-user"></i> About Me</h3>
-    <div class="card">
-        Hallo, saya Tubagus Muhamad Alpin. Mahasiswa aktif Semester 6 Teknik Elektro
-        Universitas Mercu Buana yang memiliki ketertarikan pada sistem tenaga listrik,
-        analisis teknis, dan pemanfaatan teknologi digital.
-    </div>
+<h3 class="section-title"><i class="fas fa-user"></i> About Me</h3>
+<div class="card">
+Hallo, saya Tubagus Muhamad Alpin. Mahasiswa aktif Semester 6 Teknik Elektro Universitas Mercu Buana dengan minat pada sistem tenaga listrik dan teknologi digital.
+</div>
 </section>
 
 <!-- EDUCATION -->
 <section id="education">
-    <h3 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h3>
-    <div class="card">
-        <h4>Universitas Mercu Buana</h4>
-        <p>Teknik Elektro | IPK 3.37 | 2023 - Sekarang</p>
-    </div>
+<h3 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+<div class="card">
+Universitas Mercu Buana | Teknik Elektro | IPK 3.37 | 2023 - Sekarang
+</div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-    <h3 class="section-title"><i class="fas fa-briefcase"></i> Experience</h3>
-    <div class="grid">
-        <div class="card">
-            <h4>PT Honda Prospect Motor</h4>
-            <p>Operator Facility | 2022 - 2024</p>
-        </div>
-        <div class="card">
-            <h4>LRT Jabodebek</h4>
-            <p>Teknisi Building & ME | 2024 - Sekarang</p>
-        </div>
-    </div>
+<h3 class="section-title"><i class="fas fa-briefcase"></i> Experience</h3>
+<div class="grid">
+<div class="card">
+PT Honda Prospect Motor <br> Operator Facility | 2022 - 2024
+</div>
+<div class="card">
+LRT Jabodebek <br> Teknisi Building & ME | 2024 - Sekarang
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h3 class="section-title"><i class="fas fa-tools"></i> Skills</h3>
+<div class="grid">
+
+<div class="card skill">
+<i class="fas fa-bolt"></i> Sistem Kelistrikan
+</div>
+
+<div class="card skill">
+<i class="fas fa-wrench"></i> Preventive Maintenance
+</div>
+
+<div class="card skill">
+<i class="fas fa-chart-line"></i> Analytical Thinking
+</div>
+
+<div class="card skill">
+<i class="fas fa-users"></i> Team Work
+</div>
+
+</div>
 </section>
 
 <!-- PROJECT -->
 <section id="project">
-    <h3 class="section-title"><i class="fas fa-folder-open"></i> Project</h3>
-    <div class="card">
-        <h4>Retail Performance Dashboard</h4>
-        <p>Dashboard analisis performa penjualan menggunakan Pivot Table, KPI dan Slicer interaktif.</p>
-    </div>
+<h3 class="section-title"><i class="fas fa-folder-open"></i> Project</h3>
+
+<div class="grid">
+
+<div class="card">
+<img src="portofolio1.png" class="project-img">
+<h4>Retail Performance Dashboard</h4>
+<p>Dashboard analisis penjualan berbasis Excel dengan Pivot, KPI, dan Slicer.</p>
+</div>
+
+<div class="card">
+<img src="portofolio2.png" class="project-img">
+<h4>Electrical Monitoring</h4>
+<p>Monitoring dan evaluasi performa sistem kelistrikan bangunan.</p>
+</div>
+
+</div>
 </section>
 
 <footer>
