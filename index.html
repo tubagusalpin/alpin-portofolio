@@ -109,23 +109,10 @@ position:relative;
 overflow:hidden;
 }
 
-.hero-animation i{
-position:absolute;
-font-size:90px;
-color:#a855f7;
-animation:floatIcon 4s ease-in-out infinite;
-}
-
-.hero-animation i:nth-child(2){
-font-size:70px;
-color:#ec4899;
-animation-delay:1.5s;
-}
-
-.hero-animation i:nth-child(3){
-font-size:60px;
-color:#c084fc;
-animation-delay:3s;
+.hero-animation img.hero-electric{
+    width:140px;
+    position:absolute;
+    animation:floatIcon 4s ease-in-out infinite;
 }
 
 @keyframes floatIcon{
@@ -400,7 +387,7 @@ color:#a855f7;
 cursor:pointer;
 }
 
-@media(max-width:900px){
+@media(max-width:1200px){
 
 .nav-links{
 position:absolute;
@@ -497,9 +484,7 @@ display:block;
     <!-- PROFILE IMAGE -->
     <div class="hero-right">
     <div class="hero-animation">
-        <i class="fas fa-bolt"></i>        
-        <i class="fas fa-hard-hat"></i>    
-        <i class="fas fa-book"></i>        
+        <img src="listrik.png" class="hero-electric" alt="Electric Icon">
     </div>
 </div>
 </div>
